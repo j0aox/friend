@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+
+::selection {
+  background: #353f48;
+  color: #6c63ff;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5;
+
+  color: #353f48;
+  overflow-x: hidden;
+
+  position: relative;
+}
+
+h1,
+h2 {
+  line-height: 1.2;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #6c63ff;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+/***********************************************************/
+
+.container {
+  width: 1280px;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  outline: none;
+  border: 2px solid #6c63ff;
+  border-radius: 50px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: transparent;
+  font-weight: 600;
+  color: #6c63ff;
+
+  transition-duration: 0.3s;
+  transition-property: color, border, background-color;
+}
+
+.btn:hover {
+  border: 2px solid #353f48;
+  color: #353f48;
+}
+
+.btn-full {
+  border: 2px solid #6c63ff;
+  background-color: #6c63ff;
+  color: #ededed;
+}
+
+.btn-full:hover {
+  border: 2px solid #6c63ff;
+  background-color: transparent;
+  color: #6c63ff;
+}
+
+/***********************************************************/
+
+header {
+  width: 100%;
+  height: auto;
+  padding: 50px 0 30px 0;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 5;
+}
+
+header .container {
+  width: 1600px;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo h2 {
+  font-size: 1.8em;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #6c63ff;
+  cursor: pointer;
+}
+
+header .logo h2 span {
+  display: inline-block;
+  width: 7px;
+  height: 12px;
+  margin-right: 3px;
+  transition: 0.3s background-color;
+}
+
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+header nav ul {
+  list-style: none;
+}
+
+header nav ul li {
+  display: inline-block;
+}
+
+header nav ul li a {
+  font-size: 0.9em;
+  font-weight: 600;
+  margin: 0 15px;
+  padding: 0 5px 3px;
+  border-bottom: 2px solid transparent;
+
+  transition-duration: 0.3s;
+  transition-property: color, border-bottom;
+}
+
+header nav ul li a:hover {
+  border-bottom: 2px solid #353f48;
+  color: #353f48;
+}
+
+header nav .cta {
+  margin-left: 30px;
+}
+
+header nav .cta button:last-child {
+  margin-left: 20 px;
+}
+
+/***********************************************************/
+
+.hero {
+  width: 100;
+  height: 100vh;
+  background-color: #ebf2f5;
+
+  position: relative;
+  z-index: 1;
+}
+
+.hero .mid {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 30vh;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+}
+
+.hero .mid .desc {
+  width: 50%;
+}
+
+.hero .mid .desc h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.hero .mid .desc h1 span {
+  font-size: 1.5em;
+  -webkit-text-stroke: 1px #6c63ff;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero .mid .desc p {
+  width: 550px;
+  max-width: 100%;
+  margin-bottom: 50px;
+}
+
+.hero .mid .placeholder {
+  width: 50%;
+}
+
+/***********************************************************/
+
+.hero .over {
+  width: 40px;
+  height: auto;
+
+  position: absolute;
+  top: 50%;
+  left: -1px;
+  transform: translateY(-50%);
+  z-index: 4;
+}
+
+.hero .over a {
+  display: block;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.hero .over a i {
+  font-size: 1.5em;
+  color: #353f48;
+
+  transition: 0.3s color;
+}
+
+.hero .over a:hover i {
+  color: #6c63ff;
+}
+
+/***********************************************************/
+
+.hero .connect {
+  position: absolute;
+  bottom: 20px;
+  right: 8%;
+}
+
+.hero .connect a {
+  font-size: 0.9em;
+  font-weight: 600;
+  margin-left: 20px;
+}
+
+.hero .connect a:hover {
+  text-decoration: underline;
+}
+
+/***********************************************************/
+
+.hamb {
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+  display: none;
+
+  position: absolute;
+  top: 59px;
+  right: 25px;
+  z-index: 6;
+}
+
+.hamb span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #6c63ff;
+}
+
+.hamb span.mid {
+  margin: 7px 0;
+}
