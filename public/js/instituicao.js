@@ -19,10 +19,11 @@ const popup = L.popup({
   minWidth: 240,
   minHeight: 240,
 }).setContent(
-  'Casa Durval Paiva <a href="info-intituicao.html?id=1" class="choose-instituicao"> <img src="./public/img/next.svg" </a>'
+  'Casa Durval Paiva <a href="info-instituicao.html?id=1" class="choose-instituicao"> <img src="./public/img/next.svg" </a>'
 );
 
 // criando e adicionar marcador
 L.marker([-5.7957658, -35.2079482, 15], { icon: icon })
   .addTo(map)
-  .bindPopup(popup);
+  .bindPopup(popup)
+  .openPopup(popup);
