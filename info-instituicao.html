@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casa Durval Paiva | Amigo</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="public/css/info-instituicao.css"
+    />
+    <link rel="stylesheet" href="public/css/animations.css" />
+    <link rel="stylesheet" href="public/css/main.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body> 
+
+    <div id="page-instituicao-info">
+      <aside class="animation-right sidebar">
+        <img src="./public/img/logo.png" alt="" />
+        <footer>
+          <button onclick="history.back()">
+            <img src="./public/img/back.svg" alt="" />
+          </button>
+        </footer>
+      </aside>
+
+      <main class="animate-appear with-sidebar">
+        <div class="instituicao-details">
+          <img src="public/img/home.jpg" alt="" />
+
+          <div class="images">
+            <button onclick=selectImage(event) class="active" type="button">
+              <img src="https://source.unsplash.com/random?id=1" alt="" />
+            </button>
+
+            <button onclick=selectImage(event) type="button">
+              <img src="https://source.unsplash.com/random?id=2" alt="" />
+            </button>
+
+            <button onclick=selectImage(event) type="button">
+              <img src="https://source.unsplash.com/random?id=3" alt="" />
+            </button>
+
+            <button onclick=selectImage(event) type="button">
+              <img src="https://source.unsplash.com/random?id=4" alt="" />
+            </button>
+
+            <button onclick=selectImage(event) type="button">
+              <img src="https://source.unsplash.com/random?id=5" alt="" />
+            </button>
+
+            <button onclick=selectImage(event) type="button">
+              <img src="https://source.unsplash.com/random?id=6" alt="" />
+            </button>
+          </div>
+
+          <div class="instituicao-details-content">
+            <h1>Casa Durval Paiva</h1>
+            <p>
+              Desde 1995, acolhendo a criança e o adolescente com câncer e
+              doenças hematológicas crônicas e seus familiares.
+            </p>
+
+            <div class="map-container">
+              <div id="mapid"></div>
+              <footer>
+                <a href="">Ver no Google Maps</a>
+              </footer>
+            </div>
+
+            <hr />
+
+            <h2>Intruções</h2>
+
+            <p>Venha como se sentir a vontade.</p>
+
+            <div class="open-details">
+              <div class="hour">
+                <img src="./public/img/clock.svg" alt="" />
+                Horários de visitas das 8h até 18h
+              </div>
+              <div class="open-on-weekends">
+                <img src="./public/img/info.svg" alt="" />
+                Atendemos fim de semana
+              </div>
+            </div>
+
+            <button class="primary-button">
+              <img src="./public/img/whatsapp.svg" alt="" />
+              Contato
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="public/js/info-instituicao.js"></script>
+  </body>
+</html>
