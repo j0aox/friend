@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Localização | Amigo</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+
+    <link rel="stylesheet" type="text/css" href="public/css/instituicao.css" />
+    <link rel="stylesheet" href="public/css/animations.css" />
+    <link rel="stylesheet" href="public/css/main.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="page-instituicao">
+        <aside class="animation-right">
+            <header>
+                <img src="public/img/logo.png" />
+                <h2>Escolha uma instituição no mapa</h2>
+            </header>
+
+            <footer>
+                <strong>Natal</strong>
+                <p>Rio Grande Do Norte</p>
+            </footer>
+        </aside>
+
+        <div id="mapid" class="animate-appear">
+
+        </div>
+
+        <a href="create-instituicao.html" class="create-instituicao" title="Cadastrar uma instituição">
+            <img src="public/img/plus.svg" alt="Criar intituição" />
+        </a>
+    </div>
+
+    <script src="public/js/instituicao.js"></script>
+
+</body>
+
+</html>
