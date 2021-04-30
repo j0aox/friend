@@ -6,7 +6,7 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
 
 // criando icone
 const icon = L.icon({
-  iconUrl: "./public/img/map-marker.svg",
+  iconUrl: "/img/map-marker.svg",
   iconSize: [58, 68],
   iconAnchor: [29, 68],
   popupAnchor: [170, 2],
@@ -19,7 +19,7 @@ const popup = L.popup({
   minWidth: 240,
   minHeight: 240,
 }).setContent(
-  'Casa Durval Paiva <a href="info-instituicao.html?id=1" class="choose-instituicao"> <img src="./public/img/next.svg" </a>'
+  'Casa Durval Paiva <a href="/info-instituicao?id=1" class="choose-instituicao"> <img src="/img/next.svg" </a>'
 );
 
 // criando e adicionar marcador
