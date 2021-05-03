@@ -38,7 +38,16 @@
         </aside>
 
         <div id="mapid" class="animate-appear">
-
+            <div class="teste">
+                <% institutions.forEach(instituicao=> { %>
+                    <span hidden 
+                    data-id="<%= instituicao.id %>" 
+                    data-name="<%= instituicao.name %>" 
+                    data-lat="<%= instituicao.lat %>"
+                    data-lng="<%= instituicao.lng %>"
+                    ></span>
+                <% }) %>
+            </div>
         </div>
 
         <a href="/create-instituicao" class="create-instituicao" title="Cadastrar uma instituição">
