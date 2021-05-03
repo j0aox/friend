@@ -12,18 +12,33 @@ const icon = L.icon({
   popupAnchor: [170, 2],
 });
 
-// criando sobreposição de pop-up
-const popup = L.popup({
-  closeButton: false,
-  className: "map-popup",
-  minWidth: 240,
-  minHeight: 240,
-}).setContent(
-  'Casa Durval Paiva <a href="/info-instituicao?id=1" class="choose-instituicao"> <img src="/img/next.svg" </a>'
-);
+function addMarker({id, name, lat, lng}) {
 
-// criando e adicionar marcador
-L.marker([-5.7957658, -35.2079482, 15], { icon: icon })
+  // create popup overlay
+  const popup = L.popup({
+      closeButton: false,
+      className: 'map-popup',
+      minWidth: 240,
+      minHeight: 240
+  }).setContent(`${name} <a href="/info-instituicao?id=${id}"><img src="/images/arrow-white.svg" > </a>`)
+
+
+  // create and add marker
+  L
+  .marker([lat, lng], { icon })
   .addTo(map)
   .bindPopup(popup)
-  .openPopup(popup);
+}
+
+const instituicaoSpan = document.querySelectorAll('.teste span')
+
+instituicaoSpan.forEach( span => {
+  const instituicao = {
+      id: span.dataset.id,
+      name: span.dataset.name,
+      lat: span.dataset.lat,
+      lng: span.dataset.lng
+  }
+
+  addMarker(instituicao)    
+})
