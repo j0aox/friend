@@ -8,7 +8,6 @@ const router = require('./routes');
 const app = express();
 
 // Database
-
 connection
     .authenticate()
     .then(() => {
@@ -17,25 +16,28 @@ connection
         console.log(error);
     });
 
-// View engine
+// Configurando o View engine
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // Utilizando os arquivos static
 app.use(express.static('public'));
 
-// Body parser
+// Configurando o Body parser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// Rotas
+// Rota index
 app.get('/', (req, res) => {
     res.render('index');
 });
-
+// Rotas 
 app.use(router);
 
 // Servidor
-app.listen(5000, () => {
-    console.log("O servidor está rodando!");
+const host = 'localhost';
+const port = 5000;
+
+app.listen(port, host, () => {
+    console.log(`O servidor está rodando na porta http://${host}:${port}`);
 });
