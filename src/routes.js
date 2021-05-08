@@ -4,12 +4,13 @@ const router = express.Router();
 const instituicaoController = require('./controllers/InstituicaoController');
 const createInstituicaoController  = require('./controllers/createInstituicaoController');
 const infoInstituicaoController  = require('./controllers/InfoInstituicaoController');
-
-//const model = require('./model/Instituicao');
+const loginController = require('./controllers/loginController');
 
 router.get('/instituicao', instituicaoController);
 router.get('/create-instituicao', createInstituicaoController);
 router.get('/info-instituicao', infoInstituicaoController);
+router.get('/login', loginController);
+
 
 router.post('/create-instituicao/save', createInstituicaoController);
 
