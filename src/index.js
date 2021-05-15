@@ -37,7 +37,7 @@ app.use(router);
 
 // Servidor
 const host = 'localhost';
-const port = 5500;
+const port = 5000;
 
 app.listen(port, host, () => {
     console.log(`O servidor está rodando na porta http://${host}:${port}`);
