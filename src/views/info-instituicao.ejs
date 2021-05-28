@@ -19,11 +19,7 @@
       crossorigin=""
     ></script>
 
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="/css/info-instituicao.css"
-    />
+    <link rel="stylesheet" type="text/css" href="/css/info-instituicao.css" />
     <link rel="stylesheet" href="/css/animations.css" />
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/sidebar.css" />
@@ -78,14 +74,16 @@
           </div>
 
           <div class="instituicao-details-content">
-            <h1>Casa Durval Paiva</h1>
-            <p>
-              Desde 1995, acolhendo a criança e o adolescente com câncer e
-              doenças hematológicas crônicas e seus familiares.
-            </p>
+          
+            <h1><%= institution.name %></h1>
+
+            <p><%= institution.about %></p>
 
             <div class="map-container">
-              <div id="mapid"></div>
+              <div id="mapid">
+                    <%= institution.lat %>
+                    <%= institution.lng%>
+              </div>
               <footer>
                 <a href="">Ver no Google Maps</a>
               </footer>
@@ -93,18 +91,18 @@
 
             <hr />
 
-            <h2>Intruções</h2>
+            <h2><%= institution.instructions  %></h2>
 
             <p>Venha como se sentir a vontade.</p>
 
             <div class="open-details">
               <div class="hour">
                 <img src="/img/clock.svg" alt="" />
-                Horários de visitas das 8h até 18h
+                <%= institution.opening_hours %>
               </div>
               <div class="open-on-weekends">
                 <img src="/img/info.svg" alt="" />
-                Atendemos fim de semana
+                <%= institution.open_on_weekends %>
               </div>
             </div>
 
@@ -118,5 +116,6 @@
     </div>
 
     <script src="/js/info-instituicao.js"></script>
+    
   </body>
 </html>

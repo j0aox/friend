@@ -9,6 +9,7 @@ const loginController = require('./controllers/loginController');
 router.get('/instituicao', instituicaoController);
 router.get('/create-instituicao', createInstituicaoController);
 router.get('/info-instituicao', infoInstituicaoController);
+router.get('/info-instituicao/:id', infoInstituicaoController);
 router.get('/login', loginController);
 
 
