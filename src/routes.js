@@ -11,6 +11,7 @@ router.get('/create-instituicao', createInstituicaoController);
 router.get('/info-instituicao', infoInstituicaoController);
 router.get('/info-instituicao/:id', infoInstituicaoController);
 router.get('/login', loginController);
+router.get('/create-login', loginController);
 
 
 router.post('/create-instituicao/save', createInstituicaoController);
