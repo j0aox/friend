@@ -13,8 +13,7 @@ router.get('/info-instituicao/:id', infoInstituicaoController);
 router.get('/login', loginController);
 router.get('/create-login', loginController);
 
-
 router.post('/create-instituicao/save', createInstituicaoController);
-
+router.post('/create-login/save', loginController);
 
 module.exports = router;
