@@ -3,10 +3,10 @@ const connection = require('../database/database');
 
 const User = connection.define('user', {
     email: {
-        type: Sequelize.DOUBLE,
+        type: Sequelize.STRING,
         allowNull: false
     }, password: {
-        type: Sequelize.DOUBLE,
+        type: Sequelize.STRING,
         allowNull: false
     }
 });
