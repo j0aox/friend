@@ -3,9 +3,15 @@ const bodyParser = require("body-parser");
 const connection = require("./database/database");
 const path = require('path');
 const router = require('./routes');
+const session = require("express-session");
 
 // Iniciando o express
 const app = express();
+
+// Iniciando sessão
+app.use(session({
+    secret: "juntosParaOBem", cookie: { maxAge: 1000 }
+}));
 
 // Database
 connection
