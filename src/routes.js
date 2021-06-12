@@ -15,5 +15,6 @@ router.get('/create-login', loginController);
 
 router.post('/create-instituicao/save', createInstituicaoController);
 router.post('/create-login/save', loginController);
+router.post('/autenticate', loginController);
 
 module.exports = router;
