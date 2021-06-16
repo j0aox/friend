@@ -63,8 +63,8 @@ router.post("/autenticate", (req, res) => {
           id: user.id,
           email: user.email
         }
-        res.json({user});
-        //res.redirect("/create-instituicao");
+        //res.json({user});
+        res.redirect("/create-instituicao");
       } else {
        
         res.redirect("/login");
