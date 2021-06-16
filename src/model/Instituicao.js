@@ -30,6 +30,6 @@ const Instituicao = connection.define('institution', {
 });
 
 // Essa linha de baixo sincroniza a model com banco de dados
-//Instituicao.sync({force: true});
+Instituicao.sync({force: false});
 
 module.exports = Instituicao;

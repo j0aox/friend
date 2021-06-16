@@ -12,6 +12,6 @@ const User = connection.define('user', {
 });
 
 // Essa linha de baixo sincroniza a model com banco de dados
-//User.sync({force: true});
+User.sync({force: false});
 
 module.exports = User;
