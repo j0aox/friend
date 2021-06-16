@@ -2,6 +2,16 @@ const express = require("express");
 const router = express.Router();
 const User = require("../model/User");
 const bcrypt = require("bcryptjs");
+const session = require("express-session");
+
+const app = express();
+
+app.use(session({
+  secret: "juntosParaOBem", 
+  resave: true,
+  saveUninitialized: true,
+  cookie: { maxAge: 30000 }
+}));
 
 router.get("/login", (req, res) => {
   return res.render("login");
@@ -53,8 +63,10 @@ router.post("/autenticate", (req, res) => {
           id: user.id,
           email: user.email
         }
-        res.json(req.session.user);
+        res.json({user});
+        //res.redirect("/create-instituicao");
       } else {
+       
         res.redirect("/login");
       }
     } else {

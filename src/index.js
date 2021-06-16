@@ -10,7 +10,10 @@ const app = express();
 
 // Iniciando sessão
 app.use(session({
-    secret: "juntosParaOBem", cookie: { maxAge: 1000 }
+    secret: "juntosParaOBem", 
+    resave: true,
+    saveUninitialized: true,
+    cookie: { maxAge: 30000 }
 }));
 
 // Database
