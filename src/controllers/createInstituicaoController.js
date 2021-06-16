@@ -1,12 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const Instituicao = require('../model/Instituicao');
+const permissao = require('../middlewares/middlewar');
 
-router.get('/create-instituicao', (req, res) => {
+router.get('/create-instituicao', permissao,(req, res) => {
     return res.render('create-instituicao');
 });
 
-router.post('/create-instituicao/save', (req, res) => {
+router.post('/create-instituicao/save', permissao,(req, res) => {
     const lat = req.body.lat;
     const lng = req.body.lng;
     const name = req.body.name;
