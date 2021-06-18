@@ -23,6 +23,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.2",
     "mysql2": "^2.2.5",
+    "node-localstorage": "^2.2.1",
     "sequelize": "^6.6.2"
   },
   "devDependencies": {

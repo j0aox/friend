@@ -1,5 +1,6 @@
 const Sequelize = require('sequelize');
 const connection = require('../database/database');
+const User = require('../model/User');
 
 const Instituicao = connection.define('institution', {
     lat: {
@@ -29,7 +30,9 @@ const Instituicao = connection.define('institution', {
     }
 });
 
+//Instituicao.belongsTo(User);
+
 // Essa linha de baixo sincroniza a model com banco de dados
-Instituicao.sync({force: false});
+Instituicao.sync({force: false}); // Uma instituição pertence a um usuario
 
 module.exports = Instituicao;

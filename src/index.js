@@ -13,7 +13,7 @@ app.use(session({
     secret: "juntosParaOBem", 
     resave: true,
     saveUninitialized: true,
-    cookie: { maxAge: 30000 }
+    cookie: { maxAge: 30000000 }
 }));
 
 // Database

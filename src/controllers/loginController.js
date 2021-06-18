@@ -2,16 +2,6 @@ const express = require("express");
 const router = express.Router();
 const User = require("../model/User");
 const bcrypt = require("bcryptjs");
-const session = require("express-session");
-
-const app = express();
-
-app.use(session({
-  secret: "juntosParaOBem", 
-  resave: true,
-  saveUninitialized: true,
-  cookie: { maxAge: 30000 }
-}));
 
 router.get("/login", (req, res) => {
   return res.render("login");
@@ -39,7 +29,6 @@ router.post("/create-login/save", (req, res) => {
         .catch((err) => {
           res.redirect("/");
         });
-
     } else {
         res.redirect("/create-login/save")
     }
@@ -73,6 +62,6 @@ router.post("/autenticate", (req, res) => {
       res.redirect("/login");
     }
   });
-})
+});
 
 module.exports = router;
