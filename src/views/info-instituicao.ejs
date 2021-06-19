@@ -81,7 +81,7 @@
 
             <div class="map-container">
               <div id="mapid">
-                    <%= institution.lat %>
+                    <%= institution.lat%>
                     <%= institution.lng%>
               </div>
               <footer>
@@ -105,11 +105,13 @@
                 <%= institution.open_on_weekends %>
               </div>
             </div>
+            
+            <a href="https://api.whatsapp.com/send?l=pt-pt_BR&phone=<%= institution.whatsapp %>&text=Oi, quero conversar sobre visitas no <%= institution.name %>."
+            target="_blank" class="primary-button" type="button">
+            <img src="/img/whatsapp.svg" alt="Chamar no whatsapp" />
+            Entrar em contato
+            </a>
 
-            <button class="primary-button">
-              <img src="/img/whatsapp.svg" alt="" />
-              Contato
-            </button>
           </div>
         </div>
       </main>
