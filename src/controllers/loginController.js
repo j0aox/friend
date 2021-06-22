@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const User = require("../model/User");
 const bcrypt = require("bcryptjs");
+const { request } = require("express");
 
 router.get("/login", (req, res) => {
   return res.render("login");
@@ -52,7 +53,9 @@ router.post("/autenticate", (req, res) => {
           id: user.id,
           email: user.email
         }
+        ;
         //res.json({user});
+        console.log(req.session.user.id);
         res.redirect("/create-instituicao");
       } else {
        
